@@ -5,6 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Alapok 4. - 1. feladat</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", initialize);
+
+        function initialize() {
+            const atalakit_gomb = document.getElementById('atalakit');
+            atalakit_gomb.addEventListener("click", () => {
+                const szoveg = document.getElementById("szoveg").value;
+                const kisbetus = document.getElementById("kisbetus").checked;
+                const nagybetus = document.getElementById("nagybetus").checked;
+                if (kisbetus) {
+                    kimenet.innerHTML = szoveg.toLowerCase();
+                } else if (nagybetus) {
+                    kimenet.innerHTML = szoveg.toUpperCase();
+                }
+
+
+            });
+        }
+    </script>
 </head>
 
 <body>
