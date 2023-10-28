@@ -14,16 +14,33 @@
                 const vNev = document.getElementById('vezetekNev').value;
                 const uNev = document.getElementById('utoNev').value;
                 const telSzam = document.getElementById('telefon').value;
+                const email = document.getElementById('email').value;
                 const szuletesiDatum = document.getElementById('szulDatum').value;
                 const szuletesiHely = document.getElementById('szulHely').value;
                 if (vNev == "") {
-                    alert("Nem adta meg a vezetéknevét");
+                    alert("Kérem adja meg a vezetéknevét.");
+                }
+                else if (uNev == "") {
+                    alert("Kérem adja meg az utónevét.");
+                }
+                else if (telSzam == "") {
+                    alert("Kérem adja meg a telefonszámát.");
+                }
+                else if (email == "") {
+                    alert("Kérem adja meg az e-mail címét.");
+                }
+                else if (szuletesiDatum == "") {
+                    alert("Kérem adja meg a születési dátumát.")
+                }
+                else if (szuletesiHely == "") {
+                    alert("Kérem adja meg a születési helyét!");
                 }
                 else {
                     const adatok = {
                         vezetekNev: vNev,
                         utoNev: uNev,
                         telefon: telSzam,
+                        email: email,
                         szulDatum: szuletesiDatum,
                         szulHely: szuletesiHely
                     };
