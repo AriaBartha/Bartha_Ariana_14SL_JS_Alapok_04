@@ -14,13 +14,18 @@
                 const szoveg = document.getElementById("szoveg").value;
                 const kisbetus = document.getElementById("kisbetus").checked;
                 const nagybetus = document.getElementById("nagybetus").checked;
-                if (kisbetus) {
-                    kimenet.innerHTML = szoveg.toLowerCase();
-                } else if (nagybetus) {
-                    kimenet.innerHTML = szoveg.toUpperCase();
+                if (szoveg == "") {
+                    alert("Nem adott meg szöveget!")
+                } else {
+                    if (kisbetus) {
+                        kimenet.innerHTML = szoveg.toLowerCase();
+                    } else if (nagybetus) {
+                        kimenet.innerHTML = szoveg.toUpperCase();
+                    } else {
+                        alert("Nem választotta ki, hogy kis vagy nagybetűssé legyen alakítva a szöveg!");
+                    }
+
                 }
-
-
             });
         }
     </script>
