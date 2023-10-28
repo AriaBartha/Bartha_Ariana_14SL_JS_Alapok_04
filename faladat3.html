@@ -5,6 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Alapok 4. - 3. feladat</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", initialize);
+        function initialize() {
+
+            const gomb = document.getElementById('elkuld');
+            gomb.addEventListener("click", () => {
+                const vNev = document.getElementById('vezetekNev').value;
+                const uNev = document.getElementById('utoNev').value;
+                const telSzam = document.getElementById('telefon').value;
+                const szuletesiDatum = document.getElementById('szulDatum').value;
+                const szuletesiHely = document.getElementById('szulHely').value;
+                if (vNev == "") {
+                    alert("Nem adta meg a vezetéknevét");
+                }
+                else {
+                    const adatok = {
+                        vezetekNev: vNev,
+                        utoNev: uNev,
+                        telefon: telSzam,
+                        szulDatum: szuletesiDatum,
+                        szulHely: szuletesiHely
+                    };
+                    console.log(adatok.valueOf());
+                }
+            })
+        }
+    </script>
 </head>
 
 <body>
