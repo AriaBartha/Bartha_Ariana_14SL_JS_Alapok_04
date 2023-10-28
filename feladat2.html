@@ -25,6 +25,13 @@
                     alert("A jelszó legyen legalább 5 karakter!")
                 }
                 else {
+                    const adatok = {
+                        felhnev: felhasznalonev,
+                        jelszo: jelszo1,
+                        eMail: email,
+                        szuletesiDatum: szulDatum
+                    };
+                    console.log("Felhasználónév: " + adatok.felhnev + "jelszó: " + adatok.jelszo + "Email: " + adatok.eMail + "Születési dátum: " + adatok.szuletesiDatum);
 
                 }
             })
