@@ -15,6 +15,18 @@
                 const jelszo2 = document.getElementById('jelszo2').value;
                 const email = document.getElementById('email').value;
                 const szulDatum = document.getElementById('szuletesiDatum').value;
+                if (felhasznalonev.length < 5 || felhasznalonev.length > 16) {
+                    alert("A felhasználónév hosszúsága legyen 5 és 16 karakter között!")
+                }
+                else if (jelszo1 != jelszo2) {
+                    alert("A jelszó nem egyezik!")
+                }
+                else if (jelszo1.length < 5) {
+                    alert("A jelszó legyen legalább 5 karakter!")
+                }
+                else {
+
+                }
             })
         }
     </script>
