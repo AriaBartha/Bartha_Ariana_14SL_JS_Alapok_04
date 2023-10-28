@@ -5,13 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Alapok 4. - 2. feladat</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", initialize);
+        function initialize() {
+            const elfogadGomb = document.getElementById('elkuld');
+            elfogadGomb.addEventListener("click", () => {
+                const felhasznalonev = document.getElementById('nev').value;
+                const jelszo1 = document.getElementById('jelszo1').value;
+                const jelszo2 = document.getElementById('jelszo2').value;
+                const email = document.getElementById('email').value;
+                const szulDatum = document.getElementById('szuletesiDatum').value;
+            })
+        }
+    </script>
 </head>
 
 <body>
     <form action="">
         <div>
             <label for="">Felhasználónév:</label>
-            <input itemid="nev" type="text" name="" id="">
+            <input id="nev" type="text">
         </div>
         <div>
             <label for="">Jelszó:</label>
